@@ -14,4 +14,4 @@ For example, [/example/layout/index](/example/layout/index)
 ### TODO
 
 - Add yml data file
-- Support for js/css files
+- Support for site based public folder for js/css/images files

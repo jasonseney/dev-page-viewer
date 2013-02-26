@@ -8,5 +8,9 @@ require './app'
 run Sinatra::Application
 
 require 'sass/plugin/rack'
-Sass::Plugin.options[:syntax] = :scss
+Sass::Plugin.options.merge!(
+  :template_location => './app/css',
+  :css_location => './public/css',
+  :syntax => :scss
+)
 use Sass::Plugin::Rack

@@ -7,11 +7,10 @@ Port of `quick-web-app` to show a specific layout and template. Link or copy you
 
 Urls require _three parts_: `/site/layout/template`
 
-For example, [/example/layout/index](/example/layout/index)
+For example, [/example-layout/example-template](/example-layout/example-template)
 
 ---
 
 ### TODO
 
 - Add yml data file
-- Support for site based public folder for js/css/images files

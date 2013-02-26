@@ -1,7 +1,12 @@
+# Display the Readme when viewing the root
 get '/' do
-  markdown File.read('README.md'), :layout_engine => :erb
+  markdown File.read('README.md'), :layout_engine => :erb, :layout => "bootstrap-layout".to_sym
 end
 
-get '/:sitename/:layout/:page' do
-  erb params[:page].to_sym, :views => settings.root + '/views/'+ params[:sitename], :layout => params[:layout].to_sym
+get '/:layout/:page' do
+  page = params[:page].to_sym
+  layout = params[:layout].to_sym
+  views_path = settings.root + '/views/'
+
+  erb page, :views => views_path, :layout => layout
 end
